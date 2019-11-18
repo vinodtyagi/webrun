@@ -1,5 +1,9 @@
 pipeline{
     agent any
+    
+    environment {
+    PATH = "C:\\WINDOWS\\SYSTEM32"
+    }
         stages{
          stage("git checkout"){
              steps{
@@ -8,8 +12,7 @@ pipeline{
         }
         stage("maven build"){
             steps{
-                PATH = %SystemRoot%\system32:%PATH%
-            bat "mvn clean package"
+                bat "mvn clean package"
             }    
         }
     }
