@@ -8,6 +8,7 @@ pipeline{
         }
         stage("maven build"){
             steps{
+                PATH = %SystemRoot%\system32:%PATH%
             bat "mvn clean package"
             }    
         }
