@@ -7,7 +7,7 @@ pipeline{
             }
         }
         stege{
-            steps("maven clean package")
+            steps("maven build")
             bat "mvn clean package"
         }
     }
