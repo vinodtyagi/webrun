@@ -6,7 +6,7 @@ pipeline{
                git credentialsId: 'git-hub', url: 'https://github.com/vinodtyagi/webrun.git'
             }
         }
-        stege("maven build"){
+        stage("maven build"){
             steps{
             bat "mvn clean package"
             }    
